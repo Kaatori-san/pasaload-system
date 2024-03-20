@@ -47,6 +47,7 @@ function transferLoad() {
     var amount = parseFloat(document.getElementById("amount").value);
 
     if (balance < amount) {
+        updateBalanceDisplay();
         document.getElementById("result").innerHTML = "Transaction failed: Insufficient balance.";
         return;
     }
